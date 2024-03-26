@@ -123,7 +123,7 @@ function modalesPokemon(data){
 }
 
 function searchPokemon() {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const searchTerm = document.getElementById('buscador').value.toLowerCase();
     const cards = document.querySelectorAll('.card');
 
     cards.forEach(card => {
@@ -131,13 +131,12 @@ function searchPokemon() {
         const number = card.querySelector('.number').textContent.replace('#', '');
 
         if (name.includes(searchTerm) || number.includes(searchTerm)) {
-            card.style.display = 'block'; // Mostrar la tarjeta si coincide con el término de búsqueda
+            card.style.display = 'block'; 
         } else {
-            card.style.display = 'none'; // Ocultar la tarjeta si no coincide con el término de búsqueda
+            card.style.display = 'none'; 
         }
     });
 }
 
-// Escuchar el evento de cambio en el campo de búsqueda
-document.getElementById('search-input').addEventListener('input', searchPokemon);
+document.getElementById('buscador').addEventListener('input', searchPokemon);
 fetchPokemonNumber(30);
