@@ -1,0 +1,269 @@
+body{
+    background-color: rgb(234, 234, 234);
+}
+/*header*/
+header{
+    width: auto;
+    height: 200px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+    border-bottom-width: 5px;
+    border-bottom-style: ridge;
+    border-bottom-color: #e83535;
+    background-color: #e2d9c2;
+    padding: 0px 30px 0px 30px;
+
+}
+.img-logo{
+    display: flex;
+   flex-direction: row;
+}
+h1{
+    font-size: 80px;
+    text-align: center;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 255, 0, 0.886);
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: blue;
+
+
+}
+.logo{
+    height: 200px;
+    width: auto;
+
+}
+
+
+.subTitulo{
+    font-size:40px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #cc063e;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+/*Bucador*/
+.buscador{
+    text-decoration: none;
+     border-radius: 10px;
+    font-family: "Madimi One", sans-serif;
+    width: 350px;
+    height: 30px;
+    border: 2px solid #fd9407;
+    text-align: center;
+    box-shadow: 5px 6px 9px -7px rgba(0,0,0,0.71);
+  
+}
+.buscador-content{
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+ 
+}
+
+.btn-buscador{
+    padding: 5px 10px;
+    background-color: #cc063e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Madimi One", sans-serif;
+    font-size: 15px;
+}
+
+.btn-buscador:hover{
+    background-color: #fb3f74;
+}
+/*card*/
+.contenedor-tarjetas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid #fd9407;
+    margin: 10px 10px 10px 10px;
+}
+
+.card .head{
+    height: 125px;
+    width: 100%;
+    position: relative;
+}
+
+.card .head .circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #fd9407;
+    bottom: 0;
+
+}
+
+.card .head .img-card{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 100px;
+    bottom: -50%;
+    left: 50%;
+    transform: translate(-50%);
+    border: #e83535 5px inset;
+
+}
+
+.card .head .img-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.number{
+    margin-top: -15px;
+    text-align: center;
+    font-family: "Madimi One", sans-serif;
+    font-size: 28px;
+    color:#10898b;
+    background-color: aliceblue;
+    border-radius: 100%;
+
+}
+
+.card .description{
+    height: 200px;
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+}
+
+
+h3{
+    font-family: "Madimi One", sans-serif;
+    font-size: 30px;
+    color: #10898b;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.tipo{
+    margin-top: -8px;
+    font-family: "MuseoModerno", sans-serif;
+    color: #fd9407;
+}
+
+.more-info{
+    margin: 20px auto 5px;
+    padding: 10px 20px;
+    background-color: #fd9407;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Madimi One", sans-serif;
+    font-size: 15px;
+
+}
+
+.more-info:hover{
+    background-color: #ffac3f;
+
+}
+
+/*modal*/
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.432);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal-info{
+    
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: azure;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+    grid-auto-columns: 100%;
+}
+
+.modal-titulo{
+    font-size: 40px;
+    font-family: "Madimi One", sans-serif;
+}
+.modal-img{
+    width: 90px;
+    max-width: 300px;
+}
+
+.modal-cerrar{
+    text-decoration: none;
+    color: azure;
+    background-color: #fd9407;
+    padding: 1em 3em;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+    font-family: "Madimi One", sans-serif;
+
+  
+}
+
+.modal-cerrar:hover{
+    color: #fd9407;
+    background-color: azure;
+}
+
+.modal h2{
+    color: #fd9407;
+}
+.modal p {
+    font-size: 20px;
+    font-family: "Madimi One", sans-serif;
+    color: #10898b;
+
+}
